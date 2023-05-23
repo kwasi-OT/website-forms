@@ -9,12 +9,15 @@
 </head>
 <body>
     <section class="formSection">
-        <div class="info">
+        <!-- container to hold information on top of form -->
+        <div class="info"> 
             <h1>Sign Up</h1>
                 <p>Please fill the form below to register</p>
                 <hr>
         </div>
+        <!-- actual form -->
         <form class="form">
+            <!-- container to hold various compoments of the form, for easy styling -->
             <div class="container">
                 <label for="fname" class="sr-only">Full Name</label>
                 <input type="text" placeholder="Enter Full Name" name="fname" id="fname" required autofocus>
@@ -27,6 +30,7 @@
 
                 <label for="cpassword" class="sr-only">Confirm Password</label>
                 <input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword" required>
+                <!-- separate container for date of birth and gender because of their nature and for separate styling -->
                 <div class="date-gender">
                     <div>
                         <label for="bdate">Date of Birth</label>

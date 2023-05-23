@@ -1,3 +1,4 @@
+/* global settings */
 * {
     padding: 0;
     margin: 0;
@@ -33,13 +34,20 @@
     padding: 0.5rem;
 }
 
+/* mobile and tablet screen settings */
 .form {
     width: 90%;
     margin: 0 auto;
 }
 
+/* hide labels but make available only for screen readers */
 .sr-only {
-    display: none;
+    position: absolute;
+    left: -10000;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .container {
@@ -63,16 +71,19 @@ input, select, textarea {
     margin: 0.7rem;
 }
 
+/* increase the width of input field to cover total width of its container */
 input[type=text], input[type=password], select, textarea {
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
 }
 
+/* increase placeholder font size */
 input::placeholder, textarea::placeholder {
     font-size: larger;
 }
 
+/* date of birth and gender section styling */
 .date-gender {
     width: 100%;
     display: flex;
@@ -84,10 +95,12 @@ input::placeholder, textarea::placeholder {
     padding: 0.8rem;
 }
 
+/* increase height of textarea */
 textarea {
-    height: 11.25rem;
+    height: 12rem;
 }
 
+/* submit button styling */
 .btn {
     width: 100%;
     padding: 1rem;
@@ -105,12 +118,13 @@ textarea {
     color: #fff;
 }
 
+/* desktop settings */
 @media (min-width:900px) {
-    .form {
+    .form {  /*change form width to 50% of the screen and center */
         width: 50%;
         margin: 0 auto;
     }
-
+/* increase input field padding on */
     input[type=text], input[type=password], select, textarea {
         width: 100%;
         padding: 1.5rem;
