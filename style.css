@@ -69,7 +69,9 @@ input[type=text], input[type=password], select, textarea {
     box-sizing: border-box;
 }
 
-
+input::placeholder, textarea::placeholder {
+    font-size: larger;
+}
 
 .date-gender {
     width: 100%;
@@ -101,4 +103,17 @@ textarea {
 .btn:hover {
     background-color: #007aff;
     color: #fff;
+}
+
+@media (min-width:900px) {
+    .form {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    input[type=text], input[type=password], select, textarea {
+        width: 100%;
+        padding: 1.5rem;
+        box-sizing: border-box;
+    }
 }
