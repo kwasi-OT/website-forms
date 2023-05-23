@@ -9,42 +9,40 @@
 </head>
 <body>
     <section class="formSection">
-        <form>
-            <div class="container">
-                <h1>Sign Up</h1>
+        <div class="info">
+            <h1>Sign Up</h1>
                 <p>Please fill the form below to register</p>
                 <hr>
-                <div>
-                    <label for="fname">Full Name</label>
-                    <input type="text" placeholder="Full Name" name="fname" id="fname" required>
+        </div>
+        <form class="form">
+            <div class="container">
+                <label for="fname" class="sr-only">Full Name</label>
+                <input type="text" placeholder="Enter Full Name" name="fname" id="fname" required autofocus>
+
+                <label for="email" class="sr-only">Email</label>
+                <input type="text" pattern="[^ @]*@[^ @]*" placeholder="Enter Your Email" name="email" id="email" required>
+
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+                <label for="cpassword" class="sr-only">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword" required>
+                <div class="date-gender">
+                    <div>
+                        <label for="bdate">Date of Birth</label>
+                        <input type="date" name="bdate" id="bdate" required>
+                    </div>
+                    <div>
+                        <p>Gender</p>
+                        <label for="gender">Male</label>
+                        <input type="radio" name="gender" id="male" required>
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" required>
+                        <label for="other">Other</label>
+                        <input type="radio" name="gender" id="other" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Email Address" name="email" id="email" required>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Password" name="password" id="password" required>
-                </div>
-                <div>
-                    <label for="cpassword">Confirm Password</label>
-                    <input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword" required>
-                </div>
-                <div>
-                    <label for="bdate">Date of Birth</label>
-                    <input type="date" placeholder="Date of Birth" name="bdate" id="bdate" required>
-                </div>
-                <div>
-                    <p>Gender</p>
-                    <label for="gender">Male</label>
-                    <input type="radio" name="gender" id="male" required>
-                    <label for="female">Female</label>
-                    <input type="radio" name="gender" id="female" required>
-                    <label for="other">Other</label>
-                    <input type="radio" name="gender" id="other" required>
-                </div>
-                <div>
-                    <label for="country">Country</label>
+                <label for="country" class="sr-only">Country</label>
                     <select name="country" id="country" required>
                         <option value="select country">Select Country</option>
                         <option value="ghana">Ghana</option>
@@ -52,16 +50,15 @@
                         <option value="nigeria">Nigeria</option>
                         <option value="south africa">South Africa</option>
                         <option value="uganda">Uganda</option>
-                    </select>    
-                </div>
-                <div>
-                    <label for="tandc">Term & Conditions</label>
+                    </select>  
+
+                <label for="msg" class="sr-only">Message</label>
+                <textarea name="msg" id="msg" placeholder="Message" required></textarea>
+                <p>
+                    <label for="tandc">Accept Term & Conditions</label>
                     <input type="checkbox">
-                </div>
-                <div>
-                    <label for="msg">Message</label>
-                    <textarea name="msg" id="msg" placeholder="Message" required></textarea>
-                </div>
+                </p>
+                <input type="submit" class="btn">
             </div>
         </form>
     </section>
